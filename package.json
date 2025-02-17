@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.5.5"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./resources/css/app.css -o ./public/dist/output.css --watch",
+    "start": "cross-env PHP_PATH=\\usr\\bin\\php\\ ARTISAN_PATH=\\Ping\\artisan concurrently \"npm run serve\" \"npm run runthing\" \"npm run schedule:work\"",
+    "serve": "php -S 192.168.101.136:8000 -t public > /dev/null 2>&1",
+    "runthing": "php artisan queue:work",
+    "schedule:work": "php artisan schedule:work"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "three": "^0.157.0",
+    "three-orbitcontrols": "^2.110.3"
+  }
+}
