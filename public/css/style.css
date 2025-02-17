@@ -1,0 +1,591 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    scrollbar-color: #272D38 #2D333F;
+    scroll-margin: 8px;
+}
+#hostTable,#providerTable{
+    color: black;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 5px;
+    background-color: #FFF;
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.hostbox {
+    width: 2%;
+    height: 30PX;  
+    border: 1px solid #00000041;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    z-index: 1;
+    color: black;
+}
+
+
+
+.navbar-item:hover {
+    color: #ff6600;
+}
+
+
+.button {
+    padding: 2px;
+    margin-top: 7px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -40px;
+}
+
+
+
+
+.menu-item {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item-logout {
+    display: block;
+    color: #DC4243;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #c4c4c4;
+    color: #ff6600;
+}
+
+.menu-item-logout:hover {
+    background-color: #c4c4c4;
+    color: #bf0000;
+}
+
+
+.logout {
+    color: rgb(239 68 68);
+}
+
+.menu-item-logout {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.scale-up-on-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hostbgcolor {
+    transition: transform .2s;
+    background-color: #D1D5DB;
+}
+
+.hostbgcolor:hover {
+    transform: scale(1.02);
+}
+
+#map {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.back {
+    float: left;
+    margin: 5px;
+    width: 4rem;
+    height: 1rem;
+    transition: transform .2s;
+}
+
+.host-container {
+    background-color: #FFFFFF;
+    width: 40%;
+    margin-left: -20px;
+    float: left;
+    max-height: 50rem;
+    overflow-y: auto;
+}
+
+.back:hover {
+    transform: scale(1.1);
+    color: #FF6600;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #969696;
+}
+
+.table th {
+    background-color: #adadad;
+}
+
+.table {
+    background-color: #FFF;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #adadad;
+}
+
+.chart-container {
+    background-color: #FFFFFF;
+    float: right;
+    width: 60%;
+    height: 50rem;
+    margin-right: -20px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    #hostTable,#providerTable{
+        color: white;
+    }
+    .navbar {
+        color: white;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 5px;
+        background-color: #2D3442;
+        padding: 10px;
+        border: 1px solid black;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .menu-item {
+        display: block;
+        text-decoration: none;
+        padding: 10px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+        color: white;
+    }
+
+    .menu-item:hover {
+        background-color: #4d525b;
+        color: #ff6600;
+    }
+
+    .menu-item-logout:hover {
+        background-color: #4d525b;
+    }
+    .dropdown-menu {
+        background-color: #091223;
+    }
+    .hostbgcolor {
+        transition: transform .1s;
+        background-color: #262C38;
+    }
+    .leaflet-layer,
+    .leaflet-control-zoom-in,
+    .leaflet-control-zoom-out,
+    .leaflet-control-attribution {
+        filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    }
+    .host-container {
+        background-color: #0b0e14;
+        width: 40%;
+        margin-left: -20px;
+        float: left;
+        max-height: 50rem;
+        overflow-y: auto;
+    }
+
+    .back:hover {
+        transform: scale(1.1);
+        color: #FF6600;
+    }
+
+    .chart-container {
+        background-color: #0b0e14;
+        float: right;
+        width: 60%;
+        height: 50rem;
+        margin-right: -20px;
+
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #474c56;
+    }
+
+    .table th {
+        background-color: #14171e;
+    }
+
+    .table {
+        background-color: #262C38;
+        color: white;
+    }
+
+    .table tbody tr:hover {
+        background-color: #14171e;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #2d333f;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: -40px;
+    }
+
+    .searchinhosts {
+        background-color: #0a101e;
+    }
+
+}
+  
+
+@media screen and (max-width: 768px) {
+    .bar {
+        background-color: #888;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle {
+        margin-top: 6px;
+        margin-left: 6px;
+        margin-bottom: 6px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: flex;
+        z-index: 1;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .menu.show {
+        display: block;
+        transition: ease-in-out 0.3s;
+        z-index: 2;
+    }
+
+    .menu-item {
+        display: block;
+        z-index: 2;
+    }
+
+    .menu.show .bar {
+        transition: all 0.3s ease;
+    }
+
+    input,
+    select {
+        width: 80%;
+        max-width: 100% !important;
+    }
+
+    button {
+        font-size: 18px !important;
+    }
+    .container-hosts {
+        width: 92%;
+        position: absolute;
+        font-size: 12px;
+        margin-left: 15px;
+    }
+
+    .host-name-style {
+        font-size: 12px;
+    }
+
+    .container-errors {
+        width: 73%;
+        top: 65rem;
+        position: absolute;
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    .container-all {
+        height: 105rem;
+    }
+    .container {
+        width: 80%;
+    }
+
+    #map {
+        height: 20rem;
+        width: 95%;
+    }
+
+    #container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #main {
+        width: 85%;
+        height: 80%;
+        overflow: visible;
+    }
+
+    .host-container {
+        width: 110%;
+        max-height: 50rem;
+        overflow-y: auto;
+        margin: auto;
+        margin-left: -10px;
+    }
+
+    .chart-container {
+        width: 115%;
+        height: 50rem;
+        margin-top: 20px;
+    }
+
+    .accsetttext {
+        font-size: 13px;
+        margin: auto;
+    }
+
+    .buttonChange {
+        width: 80%;
+    }
+    
+    input,
+    select {
+        width: 80% !important;
+        max-width: 100% !important;
+    }
+
+    button {
+
+        font-size: 18px !important;
+    }
+
+    .rowDisplay {
+        display: none;
+    }
+    .hostboxje {
+        width: 50%;
+    }
+    .hostbox {
+        width: 7%;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .inputchange {
+        width: 60%;
+    }
+    .buttonChange {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .accsetttext {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container-hosts {
+        font-size: 10px;
+        margin-left: 12px;
+    }
+
+    .container-errors {
+        font-size: 11px;
+        margin-left: 12px;
+    }
+}
+
+
+
+
+.container-hosts {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.hostbox {
+    position: relative;
+}
+
+.hostbox:hover::before {
+    content: attr(data-host-name);
+    position: absolute;
+    top: -20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 8;
+}
+
+.hostbox:hover::before {
+    opacity: 1;
+}
+
+.bg-green {
+    background-color: #00c900;
+}
+
+
+a {
+    transition: box-shadow 0.3s;
+}
+
+.box-container {
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+
+a:hover .box-container {
+    background-color: #0b0e14; 
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.buttonChange {
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.buttonChange:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
